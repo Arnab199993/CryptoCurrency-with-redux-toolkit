@@ -11,9 +11,9 @@ const News = () => {
     const Navigate = useNavigate()
     return (
         <>
-            <div className='flex max-w-full '>
-                <div className='h-[100vh] w-[20rem] bg-[#001540] '>
-                    <div className='flex   mt-1 p-2'>
+            <div className='flex max-w-full'>
+                <div className='h-[100vh] w-[20rem] bg-[#001540] fixed'>
+                    <div className='flex   mt-1 p-2 '>
                         <div className='  mt-2'>
                             <img src={cryptocurrency} height={30} width={30} />
                         </div>
@@ -32,12 +32,15 @@ const News = () => {
                     </div>
 
                 </div>
-                <div className='bg-[#001540] w-full h-[10rem]'>
-                    <div className=' w-[90%] h-[4rem] bg-white flex flex-col justify-center px-4 mx-auto'>
-                        <div>
-                            <CryptoNews />
+                <div className='bg-[#001540] w-full h-[10rem] ml-[20rem]'>
+                    <div className=' w-[100%]  bg-white flex flex-col justify-center  '>
+                        <div className=' p-4 mt-4 flex justify-between '>
+                            <h1 className='text-xl font-semibold'>Latest Crypto News</h1>
+                            <h1 className='text-blue-400 font-semibold text-lg cursor-pointer' onClick={() => Navigate("/more-news")}>Show More</h1>
                         </div>
+                        <CryptoNews />
                     </div>
+
                     <Footer />
                 </div>
             </div>
